@@ -1,0 +1,24 @@
+{
+  "name": "customer_display",
+  "version": "1.0.0",
+  "description": "дисплей покупателя для торговых программ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/funnywhitelemon/customer_display.git"
+  },
+  "keywords": [
+    "retail",
+    "display",
+    "customer"
+  ],
+  "author": "Dmitry Tatarinov <ok-d@list.ru>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/funnywhitelemon/customer_display/issues"
+  },
+  "homepage": "https://github.com/funnywhitelemon/customer_display#readme"
+}
