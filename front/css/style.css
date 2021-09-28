@@ -4,7 +4,8 @@
 .wrapper{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(90deg, rgba(91,218,112,1) 0%, rgba(75,219,174,1) 53%, rgba(0,212,255,1) 100%);
+    
+    background: linear-gradient(90deg, rgb(208, 233, 213) 0%, rgb(156, 190, 197) 100%);
     display: flex;
     justify-content: space-around;
     padding-top: 35px;
@@ -12,11 +13,13 @@
 
 .empty{
     flex-basis: 15%;
+    max-height: 70%;
 }
 
 .receipt{
-    flex-basis: 75%;
-    background: linear-gradient(90deg, rgba(157,196,164,0.7875525210084033) 0%, rgba(86,118,125,1) 100%);
-
+    flex-basis: 60%;
+    background: linear-gradient(90deg, rgba(91,218,112,0.2) 0%, rgba(75,219,174,0.3) 53%, rgba(0,212,255,0.4) 100%);
+    max-height: 80%;
+    border-radius: 5px;
 
 }

@@ -6,17 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/vue.js"></script>
     <title>Дисплей покупателя</title>
 </head>
 <body>
     <div id="app">
         <div class="wrapper">
-            <div class="empty"></div>
+            <div class="empty">
+                <button v-on:click="updCustomerInfo">обновить </button>
+            </div>
             <div class="receipt">
+            <h1>Добро пожаловать</h1>
              <ol>
                  <li v-for="good in receipt.goods">
-                     <p>{{good}}</p>
+                     <p>{{good.name}}</p>
+                     <p>{{good.count}}</p>
+                     <p>{{good.price}}</p>
+                     <p>{{good.total}}</p>
                  </li>
              </ol>   
             </div>    
