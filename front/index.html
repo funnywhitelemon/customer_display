@@ -6,25 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="js/vue.js"></script>
     <title>Дисплей покупателя</title>
 </head>
 <body>
     <div id="app">
         <div class="wrapper">
-            <div class="empty">
-                <button v-on:click="updCustomerInfo">обновить </button>
-            </div>
+            <div class="empty"></div>
             <div class="receipt">
-            <h1>Добро пожаловать</h1>
-             <ol>
-                 <li v-for="good in receipt.goods">
-                     <p>{{good.name}}</p>
-                     <p>{{good.count}}</p>
-                     <p>{{good.price}}</p>
-                     <p>{{good.total}}</p>
-                 </li>
-             </ol>   
+            <h1 class="welcome">Добро пожаловать</h1>
+            <table v-if="receipt.goods.length > 0" class="goods">
+                <caption>Чек № {{receipt.number}}</caption>
+                   <tr class="table-header">
+                      <th>Товар</th>
+                      <th>Количество</th>
+                      <th>Ед. измерения</th>
+                      <th>Цена</th>
+                      <th>Сумма</th>
+                   </tr>
+                   <tr v-for="good in receipt.goods" class="table-raw">
+                    <th>{{good.name}}</th>
+                    <th>{{good.count}}</th>
+                    <th>{{good.mesure}}</th>
+                    <th>{{good.price}}</th>
+                    <th>{{good.total}}</th>
+                 </tr>
+                 <tr class="table-raw total">
+                    <th>Всего</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>{{receipt.total}} Руб.</th>
+                 </tr>
+             </table>   
             </div>    
         </div>
     </div>

@@ -5,7 +5,7 @@ const port = 3000
 let state = {
   goods: [
     {
-      name: 'колбаса',
+      name: 'колбаса asd;lfas;lfkgal;fnha;fnlasknflSKDVLk',
       count: 10,
       price: 560,
       total: 5600
