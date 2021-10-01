@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="js/vue.js"></script>
     <title>Дисплей покупателя</title>
@@ -16,10 +17,10 @@
     <div id="app">
         <div class="wrapper">
             <div class="empty"></div>
-            <div class="receipt">
+            <div class="receipt custom-scroll">
             <h1 class="welcome">Добро пожаловать</h1>
             <table v-if="receipt.goods.length > 0" class="goods">
-                <caption>Чек № {{receipt.number}}</caption>
+                <caption></caption>
                    <tr class="table-header">
                       <th>Товар</th>
                       <th>Количество</th>
@@ -29,12 +30,12 @@
                    </tr>
                    <tr v-for="good in receipt.goods" class="table-raw">
                     <th>{{good.name}}</th>
-                    <th>{{good.count}}</th>
+                    <th>{{good.amount}}</th>
                     <th>{{good.mesure}}</th>
                     <th>{{good.price}}</th>
                     <th>{{good.total}}</th>
                  </tr>
-                 <tr class="table-raw total">
+                 <tr class="total">
                     <th>Всего</th>
                     <th></th>
                     <th></th>

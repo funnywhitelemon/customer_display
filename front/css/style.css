@@ -3,8 +3,37 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/*  кастомный скролл*/
+
+.custom-scroll {
+    scrollbar-color: #919ea1 #cbd8db;
+  }
+  
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background-color: #5e6668;
+    /* цвет плашки */
+    border-radius: 10px;
+    /* закругления плашки */
+    border: 2px solid #5e6668;
+    /* padding вокруг плашки */
+  }
+  
+  .custom-scroll::-webkit-scrollbar {
+    width: 8px;
+    /* ширина scrollbar */
+  }
+  
+  .custom-scroll::-webkit-scrollbar-track {
+    background: rgba(0,212,255,0.8);
+    /* цвет дорожки */
+  }
+
+  /*  основные стили*/
 .welcome{
     text-align: center;
+    color: #1F2020;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 50px;
 }
 
 .wrapper{
@@ -29,6 +58,8 @@
     background: linear-gradient(90deg, rgba(91,218,112,0.6) 0%, rgba(75,219,174,0.7) 53%, rgba(0,212,255,0.8) 100%);
     border-radius: 5px;
     box-shadow: rgba(91,218,112,0.4);
+    padding-bottom: 15px;
+    overflow: auto;
 }
 
 .goods{
@@ -36,16 +67,17 @@
     margin: 0 auto;
 }
 
-.table-header{
+.table-header th{
     color: #1F2020;
     background-color:  #AEE1CD;
     font-weight: bold;
     font-size: 20px;
+    padding: 10px 15px;
 }
-.table-raw > th {
+.table-raw th {
     font-weight: bold;
     color: #1F2020;
-    padding: 10px 15px;
+    padding: 5px 15px;
   }
    
 .table-raw{
@@ -57,4 +89,14 @@
 
 .total{
     background-color:  #AEE1CD;
+    font-weight: bold;
+    color: #1F2020;
+    padding: 10px 15px;
+}
+
+.total th{
+    background-color:  #AEE1CD;
+    font-weight: bold;
+    color: #1F2020;
+    padding: 10px 15px;
 }

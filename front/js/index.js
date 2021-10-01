@@ -10,7 +10,8 @@ var app = new Vue({
     data: {
         receipt: {
             goods: [],
-            total: null
+            total: null,
+            number: null
         },
     },
     methods: {
@@ -18,7 +19,11 @@ var app = new Vue({
             let res = await fetch("http://localhost:3000/api/getInfo")
             let info = await res.json();
             this.receipt = info;
-        }
+            
+            elReceipt = document.body.querySelector('.receipt');
+            elReceipt.scrollTop = elReceipt.scrollHeight;
+        },
+        
     },
     mounted(){
         setInterval( this.updCustomerInfo, 500);
