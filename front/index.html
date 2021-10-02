@@ -22,25 +22,25 @@
             <table v-if="receipt.goods.length > 0" class="goods">
                 <caption></caption>
                    <tr class="table-header">
-                      <th>Товар</th>
-                      <th>Количество</th>
-                      <th>Ед. измерения</th>
-                      <th>Цена</th>
-                      <th>Сумма</th>
+                      <th class="good-name">Товар</th>
+                      <th class="good-amount">Количество</th>
+                      <th class="good-mesure">Ед. измерения</th>
+                      <th class="good-price">Цена</th>
+                      <th class="good-total">Сумма</th>
                    </tr>
                    <tr v-for="good in receipt.goods" class="table-raw">
-                    <th>{{good.name}}</th>
-                    <th>{{good.amount}}</th>
-                    <th>{{good.mesure}}</th>
-                    <th>{{good.price}}</th>
-                    <th>{{good.total}}</th>
+                    <th class="good-name">{{good.name}}</th>
+                    <th class="good-amount">{{good.amount}}</th>
+                    <th class="good-mesure">{{good.mesure}}</th>
+                    <th class="good-price">{{good.price}}</th>
+                    <th class="good-total">{{good.total}}</th>
                  </tr>
                  <tr class="total">
-                    <th>Всего</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th>{{receipt.total}} Руб.</th>
+                    <th class="good-name">Всего</th>
+                    <th class="good-amount"></th>
+                    <th class="good-mesure"></th>
+                    <th class="good-price"></th>
+                    <th class="good-total">{{receipt.total}} Руб.</th>
                  </tr>
              </table>   
             </div>    

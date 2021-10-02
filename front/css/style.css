@@ -1,6 +1,8 @@
 *{
     box-sizing: border-box;
+    
     font-family: 'Roboto', sans-serif;
+    
 }
 
 /*  кастомный скролл*/
@@ -59,12 +61,32 @@
     border-radius: 5px;
     box-shadow: rgba(91,218,112,0.4);
     padding-bottom: 15px;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .goods{
     width: 98%;
     margin: 0 auto;
+}
+
+.good-name{
+    width: 40%;
+}
+.good-amount{
+    width: 10%;
+}
+
+.good-mesure{
+    width: 10%;
+}
+
+.good-price{
+    width: 20%;
+}
+
+.good-total{
+    width: 20%;
 }
 
 .table-header th{

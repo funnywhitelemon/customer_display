@@ -19,7 +19,7 @@ app.get('/api/getInfo', (req, res) => {
     res.send(JSON.stringify(state))    
   })
 
-app.post('/api', (req, res) => {
+app.post('/api/receipt', (req, res) => {
     state = req.body
     res.sendStatus(200);
   })
