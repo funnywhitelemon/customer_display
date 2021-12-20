@@ -3,8 +3,16 @@ const app = express()
 const port = 3000
 
 let state = {
-  goods: [],
-  total: null
+  goods: [
+    {
+      name: 'колбаса',
+      amount: 10,
+      mesure: 'Кг',
+      price: 560,
+      total: 5600
+    }
+  ],
+  total: 5600
 }
 
 app.use(express.json())
